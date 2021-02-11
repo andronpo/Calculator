@@ -5,13 +5,13 @@ class Expression : public Calculatable
 {
 	Expression();
 	~Expression();
-	Expression(std::string expression);
+	Expression(Calculatable* lvalue, Calculatable* rvalue, char operation);
 
-
+	char operation;
 	Calculatable* lvalue;
 	Calculatable* rvalue;
 	
-	virtual int calculate() override;
+	virtual double calculate() override;
 
 };
 

@@ -1,11 +1,14 @@
-﻿#include <iostream>
-#include <string>
-#include "Expression.h"
+#include "Calculator.h"
 
-int main()
+Calculator::Calculator()
 {
-    std::string in;
-    std::cin >> in;
+}
 
-    std::cout << "";
+Calculator::~Calculator()
+{
+}
+
+double Calculator::calculate(Calculatable* expression)
+{
+    return 0.0;
 }

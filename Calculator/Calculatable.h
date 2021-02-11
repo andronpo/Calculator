@@ -4,6 +4,6 @@
 class Calculatable
 {
 public:
-	virtual int calculate() = 0;
+	virtual double calculate() = 0;
 };
 
