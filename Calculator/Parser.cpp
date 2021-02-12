@@ -78,12 +78,17 @@ Calculatable* Parser::stringToCalculatable(std::string* expression)
     return NULL;
 }
 
-std::string* Parser::deleteSpaces(std::string* expression)
+std::string* Parser::prepareExpression(std::string* expression)
 {
     std::string* result = new std::string();
     for (int i = 0; i < expression->size(); i++) {
         if (expression->at(i) != ' ') {
-            result->push_back(expression->at(i));
+            if (expression->at(i) == ',') {
+                result->push_back('.');
+            }
+            else {
+                result->push_back(expression->at(i));
+            }
         }
     }
     return result;

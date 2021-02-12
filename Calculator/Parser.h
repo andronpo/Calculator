@@ -9,7 +9,7 @@ public:
 	~Parser();
 
 	Calculatable* stringToCalculatable(std::string* expression);
-	std::string* deleteSpaces(std::string* expression);
+	std::string* prepareExpression(std::string* expression);
 
 private:
 	std::string* getLeftValue(std::string* expression, int position);
