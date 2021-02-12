@@ -9,7 +9,7 @@ int main()
     std::getline(std::cin, *expression);                                         //считывание выражения
 
     Parser* parser = new Parser();
-    expression = parser->deleteSpaces(expression);                              //удаление лишних пробелов
+    expression = parser->prepareExpression(expression);                         //удаление лишних пробелов и замена запятых на точки
     Calculatable* expressionTree = parser->stringToCalculatable(expression);    //парсер разбирает исходное выражение и возвращает дерево компановщика
     Calculator* calculator = new Calculator();
 
