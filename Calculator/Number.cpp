@@ -8,12 +8,20 @@ Number::~Number()
 {
 }
 
-Number::Number(std::string value)
+Number::Number(std::string* value)
 {
 	this->value = value;
 }
 
 double Number::calculate()
 {
-	return std::stod(this->value);
+	double value;
+	try {
+		value = std::stod(*(this->value));
+	}
+	catch(const std::invalid_argument&){				//обработка исключения в случае, если в строке есть посторонние символы
+		std::cerr << *this->value << " not a number";
+		exit(0);
+	}
+	return value;
 }

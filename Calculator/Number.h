@@ -1,15 +1,20 @@
 #pragma once
 #include "Calculatable.h"
-class Number :
+#include <stdexcept>
+#include <iostream>
+
+class Number :                              //простейший компонент выражения
     public Calculatable
 {
+public:
     Number();
     ~Number();
-    Number(std::string value);
+    Number(std::string* value);
 
-    virtual double calculate() override;
+    virtual double calculate() override;    //в реализации метода происходит вычисление результата
 
-    std::string value;
+private:
+    std::string* value;
 
 };
 

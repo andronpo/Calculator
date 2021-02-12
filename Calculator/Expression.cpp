@@ -18,6 +18,23 @@ Expression::Expression(Calculatable* lvalue, Calculatable* rvalue, char operatio
 
 double Expression::calculate()
 {
-	// свитч на определение действия + - * /
-	return lvalue->calculate() +  rvalue->calculate();
+	switch (this->operation)
+	{
+		case '*':
+		{
+			return lvalue->calculate() * rvalue->calculate();
+		}
+		case '+':
+		{
+			return lvalue->calculate() + rvalue->calculate();
+		}
+		case '-':
+		{
+			return lvalue->calculate() - rvalue->calculate();
+		}
+		case '/':
+		{
+			return lvalue->calculate() / rvalue->calculate();
+		}
+	}
 }

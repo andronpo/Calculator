@@ -10,5 +10,5 @@ Calculator::~Calculator()
 
 double Calculator::calculate(Calculatable* expression)
 {
-    return 0.0;
+    return expression->calculate();
 }
