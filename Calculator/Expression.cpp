@@ -38,3 +38,11 @@ double Expression::calculate()
 		}
 	}
 }
+
+void Expression::clear()
+{
+	this->lvalue->clear();
+	this->rvalue->clear();
+	delete this->lvalue;
+	delete this->rvalue;
+}

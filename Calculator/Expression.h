@@ -9,6 +9,7 @@ public:
 	Expression(Calculatable* lvalue, Calculatable* rvalue, char operation);
 
 	virtual double calculate() override;		//в реализации метода, вычисление результата делигируется дочерним компонентам
+	virtual void clear() override;
 
 private:
 	char operation;

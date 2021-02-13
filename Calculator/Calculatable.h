@@ -5,5 +5,6 @@ class Calculatable		//общий интерфейс для классов Number и Expression. Нужен для
 {
 public:
 	virtual double calculate() = 0;
+	virtual void clear() = 0;
 };
 

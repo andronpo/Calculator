@@ -25,3 +25,8 @@ double Number::calculate()
 	}
 	return value;
 }
+
+void Number::clear()
+{
+	delete this->value;
+}
