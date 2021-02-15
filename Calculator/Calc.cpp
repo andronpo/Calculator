@@ -14,6 +14,7 @@ int main()
     Calculator* calculator = new Calculator();
 
     double result = calculator->calculate(expressionTree);                      //вычисление результата от выражения
+    expressionTree->clear();
 
     std::cout << std::fixed << result;
 }

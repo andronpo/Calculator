@@ -1,0 +1,11 @@
+﻿################################################################################
+# Данный GITIGNORE-файл был автоматически создан Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs
+/TestCalculator/Debug
+/Debug
+/Calculator/Debug
+/Calculator/x64/Debug/Calculator.tlog
+/Calculator/x64/Debug
+/packages/Microsoft.googletest.v140.windesktop.msvcstl.static.rt-dyn.1.8.1.3/lib/native/v140/windesktop/msvcstl/static/rt-dyn
