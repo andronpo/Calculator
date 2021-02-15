@@ -22,19 +22,30 @@ double Expression::calculate()
 	{
 		case '*':
 		{
-			return lvalue->calculate() * rvalue->calculate();
+			return this->lvalue->calculate() * this->rvalue->calculate();
 		}
 		case '+':
 		{
-			return lvalue->calculate() + rvalue->calculate();
+			return this->lvalue->calculate() + this->rvalue->calculate();
 		}
 		case '-':
 		{
-			return lvalue->calculate() - rvalue->calculate();
+			return this->lvalue->calculate() - this->rvalue->calculate();
 		}
 		case '/':
 		{
-			return lvalue->calculate() / rvalue->calculate();
+			double rightValue = this->rvalue->calculate();
+			try
+			{
+				if (rightValue == 0) {
+					throw 1;
+				}
+				return this->lvalue->calculate() / rightValue;
+			}
+			catch (int err) {								//обработка исключения в случае, если знаменатель равен 0
+				std::cerr << "divisoin by zero";
+				exit(err);
+			}
 		}
 	}
 }

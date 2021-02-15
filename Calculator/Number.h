@@ -1,7 +1,5 @@
 #pragma once
 #include "Calculatable.h"
-#include <stdexcept>
-#include <iostream>
 
 class Number :                              //простейший компонент выражения
     public Calculatable
